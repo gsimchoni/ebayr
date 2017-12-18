@@ -1,0 +1,17 @@
+Package: ebayr
+Title: R wrapper to the ebay Finding API
+Version: 0.0.0.9000
+Authors@R: person("Giora", "Simchoni", email = "gsimchoni@gmail.com", role = c("aut", "cre"))
+Description: This package allows you to search ebay using keywords, a category or both.
+	It is a wrapper for the ebay Finding API. You can use it one you sign up at https://go.developer.ebay.com/
+	and get a valid token (a.k.a AppID)
+Depends: R (>= 3.4.1)
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+Imports: httr,
+	jsonlite,
+	tidyverse,
+	stringr,
+	R6
+RoxygenNote: 6.0.1
