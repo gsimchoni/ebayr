@@ -12,7 +12,7 @@
 #' @param aspectFilter List of name-value aspect to limit the query,
 #' e.g. \code{list(Color = "Black")}. See details.
 #' @param nResults Number of items requested, defaults to 10. The maximum allowed
-#' by ebay is 10000 (max. 100 pages x max 100 items per page, where each page is a **separate** request)
+#' by ebay is 10000 (max. 100 pages x max 100 items per page, where each page is a \emph{separate} request)
 #' @param sortOrder The order by which results are sorted. Defaults to "BestMatch", the site's default.
 #' @param condition Condition of item requested, e.g. "New". Defaults to "All".
 #' @param listingType Type of item requested, e.g. "Auction". Defaults to "All", see details.
@@ -69,6 +69,7 @@
 #' ebay sets when signing up for a token as well as a daily rate
 #' limit of 5,000 requests.
 #'
+#' \code{keywords}: For rules regarding keywords, see \href{https://developer.ebay.com/devzone/finding/Concepts/FindingAPIGuide.html#usekeywords}{here}
 #' \code{categoryName}: in general the API does not accept category names which
 #' are not unique (e.g. \emph{Digital Cameras}), but only one or more category IDs.
 #' If more than a single categoryID belongs to each of the names specified, the
@@ -130,8 +131,6 @@
 #'   \item price: current price of the item in the site's currency, notice what this means for auction items
 #'   \item currency: the price currency, e.g. "AUD" for Australian Dollars
 #' }
-#'
-#' For rules regarding keywords, see \href{https://developer.ebay.com/devzone/finding/Concepts/FindingAPIGuide.html#usekeywords}{here}
 #'
 #' @references
 #' A blog post describing the package with more examples: \url{http://giorasimchoni.com/} TODO

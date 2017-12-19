@@ -29,7 +29,7 @@ Unused if the \code{categoryId} is specified. Defaults to searching all categori
 e.g. \code{list(Color = "Black")}. See details.}
 
 \item{nResults}{Number of items requested, defaults to 10. The maximum allowed
-by ebay is 10000 (max. 100 pages x max 100 items per page)}
+by ebay is 10000 (max. 100 pages x max 100 items per page, where each page is a \emph{separate} request)}
 
 \item{sortOrder}{The order by which results are sorted. Defaults to "BestMatch", the site's default.}
 
@@ -100,10 +100,12 @@ by keywords, by category or both.
 In order to use this function you must either supply it with a valid "AppID"
 from \url{https://go.developer.ebay.com} via the \code{ebayToken} parameter,
 or register it to last for your entire R session with \code{\link{setEbayToken}}.
-For more details see README and blog post in References. Please note the terms
-and conditions ebay sets when signing up for a token as well as a daily rate
+For more details see README and blog post in References. Please note the
+\href{https://go.developer.ebay.com/api-license-agreement}{API license}
+ebay sets when signing up for a token as well as a daily rate
 limit of 5,000 requests.
 
+\code{keywords}: For rules regarding keywords, see \href{https://developer.ebay.com/devzone/finding/Concepts/FindingAPIGuide.html#usekeywords}{here}
 \code{categoryName}: in general the API does not accept category names which
 are not unique (e.g. \emph{Digital Cameras}), but only one or more category IDs.
 If more than a single categoryID belongs to each of the names specified, the
@@ -165,8 +167,6 @@ Details regrding the \code{items} tibble (these are the tibble's columns):
   \item price: current price of the item in the site's currency, notice what this means for auction items
   \item currency: the price currency, e.g. "AUD" for Australian Dollars
 }
-
-For rules regarding keywords, see \href{https://developer.ebay.com/devzone/finding/Concepts/FindingAPIGuide.html#usekeywords}{here}
 }
 \examples{
 search_ebay("iPhone X")
