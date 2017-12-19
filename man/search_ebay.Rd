@@ -155,7 +155,7 @@ Details regrding the \code{items} tibble (these are the tibble's columns):
   \item categoryName: category's name
   \item viewItemURL: item's URL on ebay
   \item location: a string specifying the item's location, e.g. "Melbourne, Australia"
-  \item sheepingType:
+  \item shippingType: free or some other values, see API Reference
   \item shipToLocations:
   \item isMultiVariationListing: see details on the \code{hideDuplicateItems} parameter
   \item conditionId: ebay's ID for a condition, e.g. "1000" for "New"

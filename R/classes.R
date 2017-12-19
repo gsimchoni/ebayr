@@ -50,7 +50,7 @@ EbayResponse <- R6::R6Class(
         categoryName = item$primaryCategory[[1]]$categoryName[[1]],
         viewItemURL = item$viewItemURL[[1]],
         location = item$location[[1]],
-        sheepingType = item$shippingInfo[[1]]$shippingType[[1]],
+        shippingType = item$shippingInfo[[1]]$shippingType[[1]],
         shipToLocations = item$shippingInfo[[1]]$shipToLocations[[1]],
         isMultiVariationListing = as.logical(item$isMultiVariationListing[[1]]),
         conditionId = as.numeric(item$condition[[1]]$conditionId[[1]]),
