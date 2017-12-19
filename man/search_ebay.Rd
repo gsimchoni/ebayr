@@ -177,6 +177,6 @@ search_ebay("Nikon DSLR", categoryName = "Digital Cameras",
 
 }
 \references{
-A blog post describing the package with more examples: \url{http://giorasimchoni.com/} TODO
+A blog post describing the package with more examples: \url{http://giorasimchoni.com/2017/12/19/2017-12-19-e-is-for-elephant-the-ebayr-package/}
 The ebay Finding API documentation: \url{https://developer.ebay.com/Devzone/finding/Concepts/FindingAPIGuide.html}
 }

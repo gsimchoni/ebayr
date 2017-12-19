@@ -119,4 +119,4 @@ You should probably read ebay's [API Reference](https://developer.ebay.com/Devzo
 
 Also note that the rate limit of the API wrapped here is 5,000 requests a day, each request can bring up to 100 results (ebay items).
 
-For more possibilities see the `search_ebay` function documentation, and read [this](TODO) blog post.
+For more possibilities see the `search_ebay` function documentation, and read [this](http://giorasimchoni.com/2017/12/19/2017-12-19-e-is-for-elephant-the-ebayr-package/) blog post.
