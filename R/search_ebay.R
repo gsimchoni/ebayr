@@ -73,9 +73,10 @@
 #' \code{categoryName}: in general the API does not accept category names which
 #' are not unique (e.g. \emph{Digital Cameras}), but only one or more category IDs.
 #' If more than a single categoryID belongs to each of the names specified, the
-#' function will warn you this happened but will continue regardless. If no
-#' category is found whose name matches the input exactly, the function will suggest
-#' a few similar ones, try and pick one. Where to find the category name or ID?
+#' function will warn you this happened but will continue regardless (up to a
+#' maximum of 3 categories allowed by the API). If no category is found whose
+#' name matches the input exactly, the function will suggest a few similar ones,
+#' try and pick one. Where to find the category name or ID?
 #' \itemize{
 #'   \item through the ebay site (in an item's page, in the URL)
 #'   \item through previous results in the \code{items} tibble
