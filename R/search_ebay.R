@@ -120,7 +120,7 @@
 #'   \item viewItemURL: item's URL on ebay
 #'   \item location: a string specifying the item's location, e.g. "Melbourne, Australia"
 #'   \item shippingType: free or some other values, see API Reference
-#'   \item shipToLocations:
+#'   \item shipToLocations: Worldwide or other values, see API Reference
 #'   \item isMultiVariationListing: see details on the \code{hideDuplicateItems} parameter
 #'   \item conditionId: ebay's ID for a condition, e.g. "1000" for "New"
 #'   \item conditionName: name of condition, e.g. "New", "Used"
