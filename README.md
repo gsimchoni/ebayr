@@ -14,6 +14,9 @@ Load:
 
 ``` r
 library(ebayr)
+#> Welcome to the R wrapper to the ebay Finding API.
+#> I see you don't have a token for this API (environment variable 'EBAY_TOK').
+#> Please get one at https://go.developer.ebay.com/ and set it using setEbayToken(YOUR_TOKEN).
 ```
 
 Set ebay token:
