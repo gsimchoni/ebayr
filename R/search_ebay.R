@@ -12,7 +12,7 @@
 #' @param aspectFilter List of name-value aspect to limit the query,
 #' e.g. \code{list(Color = "Black")}. See details.
 #' @param nResults Number of items requested, defaults to 10. The maximum allowed
-#' by ebay is 10000 (max. 100 pages x max 100 items per page)
+#' by ebay is 10000 (max. 100 pages x max 100 items per page, where each page is a **separate** request)
 #' @param sortOrder The order by which results are sorted. Defaults to "BestMatch", the site's default.
 #' @param condition Condition of item requested, e.g. "New". Defaults to "All".
 #' @param listingType Type of item requested, e.g. "Auction". Defaults to "All", see details.
