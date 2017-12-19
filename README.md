@@ -42,8 +42,8 @@ search_ebay("elvis costume")
     #>  9 352211151488           Elvis Eagle White Cape Licensed King Of Rock Vegas Halloween Accessory      52762
     #> 10 222677654896 Elvis Costume 70's Style 3 Pc Wht Jumpsuit W/ Gld Sequin Trim Belt & Satin Scarf      52762
     #> # ... with 14 more variables: categoryName <chr>, viewItemURL <chr>, location <chr>, sheepingType <chr>,
-    #> #   shipToLocations <chr>, isMultiVariationListing <lgl>, conditionId <dbl>, conditionName <chr>, listingType <chr>,
-    #> #   startTime <date>, endTime <date>, watchCount <dbl>, price <dbl>, currency <chr>
+    #> #   shipToLocations <chr>, isMultiVariationListing <lgl>, conditionId <dbl>, conditionName <chr>,
+    #> #   listingType <chr>, startTime <date>, endTime <date>, watchCount <dbl>, price <dbl>, currency <chr>
 
 Search by category (a.k.a Browse):
 
@@ -65,8 +65,8 @@ search_ebay(categoryName = "Video Game Consoles")
     #>  9 292352820223                 Microsoft Xbox One S Minecraft Complete Adventure Bundle (500GB)     139971
     #> 10 292331271596                 PlayStation 4 Slim 1TB Console - Star Wars Battlefront II Bundle     139971
     #> # ... with 14 more variables: categoryName <chr>, viewItemURL <chr>, location <chr>, sheepingType <chr>,
-    #> #   shipToLocations <chr>, isMultiVariationListing <lgl>, conditionId <dbl>, conditionName <chr>, listingType <chr>,
-    #> #   startTime <date>, endTime <date>, watchCount <dbl>, price <dbl>, currency <chr>
+    #> #   shipToLocations <chr>, isMultiVariationListing <lgl>, conditionId <dbl>, conditionName <chr>,
+    #> #   listingType <chr>, startTime <date>, endTime <date>, watchCount <dbl>, price <dbl>, currency <chr>
 
 Search by both keywords and category:
 
@@ -88,8 +88,8 @@ search_ebay("Yahtzee", categoryName = c("Nonfiction", "Board & Traditional Games
     #>  9 322923844346                                                            Yahtzee Electronic     180349
     #> 10 201761399117                                          50 Triple Yahtzee Score Sheets Cards     180349
     #> # ... with 14 more variables: categoryName <chr>, viewItemURL <chr>, location <chr>, sheepingType <chr>,
-    #> #   shipToLocations <chr>, isMultiVariationListing <lgl>, conditionId <dbl>, conditionName <chr>, listingType <chr>,
-    #> #   startTime <date>, endTime <date>, watchCount <dbl>, price <dbl>, currency <chr>
+    #> #   shipToLocations <chr>, isMultiVariationListing <lgl>, conditionId <dbl>, conditionName <chr>,
+    #> #   listingType <chr>, startTime <date>, endTime <date>, watchCount <dbl>, price <dbl>, currency <chr>
 
 Search the UK site for new large size Fruit of the Loom women's T-shirts from top rated sellers at a max price of 10 pounds:
 

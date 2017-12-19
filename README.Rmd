@@ -15,7 +15,7 @@ knitr::opts_chunk$set(
 ```
 
 ```{r set-options, echo=FALSE, cache=FALSE}
-options(width = 120)
+options(width = 110)
 ```
 
 # ebayr - R wrapper to the ebay Finding API
