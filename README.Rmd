@@ -14,4 +14,104 @@ knitr::opts_chunk$set(
 )
 ```
 
-# TODO
+# ebayr - R wrapper to the ebay Finding API
+
+This package allows you to search ebay for **live** items using keywords, a category or both. It is a wrapper for the ebay Finding API, specifically the "findItemsAdvanced" call. You can use it after you sign up at https://go.developer.ebay.com/ and get a valid token (a.k.a AppID).
+
+Install:
+
+```{r Install, eval = FALSE}
+devtools::install_github("gsimchoni/ebayr")
+```
+
+Load:
+
+```{r Load}
+library(ebayr)
+```
+
+Set ebay token:
+
+```{r Set-Token, eval = FALSE}
+setEbayToken("YOUR_EBAY_TOKEN")
+```
+
+Search by keywords:
+
+```{r Search-Keywords, eval = FALSE}
+search_ebay("elvis costume")
+```
+
+```{r Search-Keywords-Cache, echo = FALSE}
+res <- readRDS("~/readmeResults.RData")
+res$keywords
+```
+
+Search by category (a.k.a Browse):
+
+```{r Search-Category, eval = FALSE}
+search_ebay(categoryName = "Video Game Consoles")
+```
+
+```{r Search-Category-Cache, echo = FALSE}
+res$category
+```
+
+Search by both keywords and category:
+
+```{r Search-Both, eval = FALSE}
+search_ebay("Yahtzee", categoryName = c("Nonfiction", "Board & Traditional Games"))
+```
+
+```{r Search-Both-Cache, echo = FALSE}
+res$both
+```
+
+Search the UK site for new large size Fruit of the Loom women's T-shirts from top rated sellers at a max price of 10 pounds:
+
+```{r Search-UK, eval = FALSE}
+res <- search_ebay("women's t-shirts",
+                   site = "UK",
+                   condition = "New",
+                   listingType = "FixedPrice",
+                   topRatedSellerOnly = TRUE,
+                   priceRange = c(0, 10),
+                   aspectFilter = list(
+                     Brand = "Fruit of the Loom",
+                     Size = "L"
+                     )
+                   )
+
+res[, c("title", "price", "currency")]
+```
+
+```{r Search-UK-Cache, echo = FALSE}
+res$uk[, c("title", "price", "currency")]
+```
+
+Search the German site for black women's handbags, ask for the 200 most expensive results:
+
+```{r Search-DE, eval = FALSE}
+res <- search_ebay("Damentaschen",
+                   site = "DE",
+                   sortOrder = "PricePlusShippingHighest",
+                   nResults = 200,
+                   aspectFilter = list(
+                     Farbe = "Schwarz"
+                     )
+                   )
+
+res[, c("title", "price", "currency")]
+```
+
+```{r Search-DE-Cache, echo = FALSE}
+res$de[, c("title", "price", "currency")]
+```
+
+The possibilities are endless, though ebay APIs have even more.
+
+You should probably read ebay's [API Reference](https://developer.ebay.com/Devzone/finding/Concepts/FindingAPIGuide.html) and [API license](https://go.developer.ebay.com/api-license-agreement) and make sure you adhere to the rules.
+
+Also note that the rate limit of the API wrapped here is 5,000 requests a day, each request can bring up to 100 results (ebay items).
+
+For more possibilities see the `search_ebay` function documentation, and read [this](TODO) blog post.

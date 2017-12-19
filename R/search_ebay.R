@@ -64,8 +64,9 @@
 #' In order to use this function you must either supply it with a valid "AppID"
 #' from \url{https://go.developer.ebay.com} via the \code{ebayToken} parameter,
 #' or register it to last for your entire R session with \code{\link{setEbayToken}}.
-#' For more details see README and blog post in References. Please note the terms
-#' and conditions ebay sets when signing up for a token as well as a daily rate
+#' For more details see README and blog post in References. Please note the
+#' \href{https://go.developer.ebay.com/api-license-agreement}{API license}
+#' ebay sets when signing up for a token as well as a daily rate
 #' limit of 5,000 requests.
 #'
 #' \code{categoryName}: in general the API does not accept category names which
