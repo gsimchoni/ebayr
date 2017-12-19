@@ -14,6 +14,10 @@ knitr::opts_chunk$set(
 )
 ```
 
+```{r set-options, echo=FALSE, cache=FALSE}
+options(width = 120)
+```
+
 # ebayr - R wrapper to the ebay Finding API
 
 This package allows you to search ebay for **live** items using keywords, a category or both. It is a wrapper for the ebay Finding API, specifically the "findItemsAdvanced" call. You can use it after you sign up at https://go.developer.ebay.com/ and get a valid token (a.k.a AppID).
@@ -42,7 +46,8 @@ Search by keywords:
 search_ebay("elvis costume")
 ```
 
-```{r Search-Keywords-Cache, echo = FALSE}
+```{r Search-Keywords-Cache, echo = FALSE, warning = FALSE}
+library(tibble)
 res <- readRDS("~/readmeResults.RData")
 res$keywords
 ```
